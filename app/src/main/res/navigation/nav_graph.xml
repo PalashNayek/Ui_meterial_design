@@ -22,10 +22,26 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_dashFragment"
+            app:destination="@id/dashFragment"
+            app:popUpTo="@id/introFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.palash.ui_meterial_design.fragments.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_dashFragment"
+            app:destination="@id/dashFragment"
+            app:popUpTo="@id/introFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashFragment"
+        android:name="com.palash.ui_meterial_design.fragments.DashFragment"
+        android:label="fragment_dash"
+        tools:layout="@layout/fragment_dash" />
 </navigation>
